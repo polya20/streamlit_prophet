@@ -65,7 +65,12 @@ with st.expander(
 st.write("")
 st.sidebar.image(load_image("shaan.png"), use_column_width=True)
 #display_links(readme["links"]["repo"], readme["links"]["article"])
-
+hide_menu_style = """
+        <style>
+        #MainMenu {visibility: hidden;}
+        </style>
+        """
+st.markdown(hide_menu_style, unsafe_allow_html=True)
 
 st.sidebar.title("1. Data")
 
