@@ -63,14 +63,15 @@ with st.expander(
     st.write(readme["app"]["app_intro"])
     st.write("")
 st.write("")
-st.sidebar.image(load_image("logod.gif"), use_column_width=True)
+st.sidebar.image(load_image("better.png"), use_column_width=True)
 #display_links(readme["links"]["repo"], readme["links"]["article"])
-hide_menu_style = """
-        <style>
-        #MainMenu {visibility: hidden;}
-        </style>
-        """
-st.markdown(hide_menu_style, unsafe_allow_html=True)
+hide_streamlit_style = """
+<style>
+.css-hi6a2p {padding-top: 0rem;}
+</style>
+
+"""
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 st.sidebar.title("1. Data")
 
