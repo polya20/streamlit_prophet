@@ -63,7 +63,7 @@ with st.expander(
     st.write(readme["app"]["app_intro"])
     st.write("")
 st.write("")
-st.sidebar.image(load_image("shaan.png"), use_column_width=True)
+st.sidebar.image(load_image("logod.gif"), use_column_width=True)
 #display_links(readme["links"]["repo"], readme["links"]["article"])
 hide_menu_style = """
         <style>
