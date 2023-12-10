@@ -56,22 +56,25 @@ config, instructions, readme = load_config(
 dates: Dict[Any, Any] = dict()
 report: List[Dict[str, Any]] = []
 
+hide_streamlit_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+
+
 # Info
 with st.expander(
-    "Shaans forecasting model in a few clicks", expanded=False
+    "Shaans sales forecasting app", expanded=False
 ):
     st.write(readme["app"]["app_intro"])
-    st.write("")
-st.write("")
-st.sidebar.image(load_image("better.png"), use_column_width=True)
+#    st.write("")
+#st.write("")
+    st.sidebar.image(load_image("logo.png"), use_column_width=True)
 #display_links(readme["links"]["repo"], readme["links"]["article"])
-hide_streamlit_style = """
-<style>
-.css-hi6a2p {padding-top: 0rem;}
-</style>
 
-"""
-st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 st.sidebar.title("1. Data")
 
